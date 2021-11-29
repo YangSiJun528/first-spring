@@ -1,13 +1,16 @@
 package com.example.first.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class) // 일괄적으로 처리 (여기선 스네이크 표기인 json을 인식한다는 뜻)
 public class PostRequestDto {
     private String account;
     private String email;
     private String address;
     private String passward;
-    @JsonProperty("phone_number") // 겍체의 변수 이름과 json에서 받아오는 값이 다를 때 사용함
+    // @JsonProperty("phone_number") // 겍체의 변수 이름과 json에서 받아오는 값이 다를 때 사용함
     private String phoneNumber;
 
     public String getAccount() {
