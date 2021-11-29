@@ -13,7 +13,7 @@ import java.util.Map;
 @RequestMapping("/api")
 public class PostApiController {
     // Post 사용법 1 (잘 안씀)
-    @PostMapping()
+    @PostMapping("/post1")
     public void post(Map<String, Object> requestData) {
         requestData.forEach((key, value) -> {
             System.out.println("key : " + key);
@@ -22,7 +22,7 @@ public class PostApiController {
     }
 
     // Post 사용법 2 (일반적으로 추천)
-    @PostMapping()
+    @PostMapping("/post2")
     public void post(@RequestBody PostRequestDto postRequestDto) {
         System.out.println(postRequestDto);
     }

@@ -24,11 +24,11 @@ public class GetApiController {
         return "Get Hi!";
     }
     // 동적 매핑 사용 1
-    @GetMapping("/path-variable/{name}") // *주소에 대문자 X
-    public String pathVariable1(@PathVariable String name) {
-        System.out.println("PathVariable :"+name);
-        return name;
-    }
+//    @GetMapping("/path-variable/{name}") // *주소에 대문자 X
+//    public String pathVariable1(@PathVariable String name) {
+//        System.out.println("PathVariable :"+name);
+//        return name;
+//    }
 
     // 동적 매핑 사용 2 주소에서 받는 값과 변수 이름이 달라야 할때 사용함
     @GetMapping("/path-variable/{name}") // *주소에 대문자 X
